@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Personal</title>
+
+    <style> /* style sirve para empezar a usar CSS, dentro de style se ponen las partes que se desean estilar */
+
+    /* (FORMATO)
+        selector{   ---->  el elemento que se desea modificar, se abren {}
+            propiedad: valor   ---->  la propiedad que se desea modificar y el valor a modificar (a esto se le declaracion)
+        }
+    
+        h1{
+            color: rgb(80 75 56 / 50%); PARA MODIFICAR OPACIDAD 
+            color:  #153448;
+            border-style: solid;
+            border-width: 3px;
+            border-color: #3C5B6F;
+        }*/
+
+        h1{
+            border: 3px solid #3C5B6F; /* border hace una linea que altera el tamaño del contenido, si queremos que mas bien
+            nada mas dibuje encima, usamos outline*/
+        }
+
+        .titles{
+            color:  #153448;
+        }
+
+        .titles:hover{
+            color: #254a63;
+        }
+
+        .description{
+            font-size: medium;
+            color: #3C5B6F;
+        }
+
+        .link{ /* . se refiere a alguna clase */
+            color: #3C5B6F;
+        }
+        .link:hover{ /* hover es una pseudoclase que modofica el momento en el que el puntero esta sobre el objeto */
+            color: #153448;
+        }
+
+        #info{ /* # se refiere al id de algun objeto */
+            color: #dacfbf;
+            background-color: #153448;
+            border: none;
+        }
+        
+        form{
+            color: #153448;
+        }
+
+        input{
+            color: #3C5B6F;
+        }
+        
+        body{
+            background-color: #dacfbf;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        footer{
+            color: #948979;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1 class="titles">Jose David Espinoza</h1>
+    <h3 class="titles">Ingeniero de Computacion Junior</h3>
+
+    <a class="link" href="https://github.com" target="_blank">Proyectos</a>
+    <a class="link" href="http://linkedin.com" target="_blank">LinkedIn</a><br>
+
+    <button id="info">Mas Información</button><br>
+
+    <h2 class="titles">Acerca De</h2>
+
+    <p class="description">
+        Con más de 2 años de experiencia en programación, <br>
+        tengo conocimientos sólidos en <strong>Python</strong>, <strong>C++</strong>, <strong>JavaScript</strong>, <br>
+        <strong>HTML</strong> y <strong>CSS</strong>. He trabajado en <strong>desarrollo web</strong> y gestionado <br>
+        proyectos a través de <strong>GitHub</strong>. Me considero una persona <br>
+        creativa, perfeccionista y detallista, con habilidades en <br>
+        comunicación efectiva, resolución de problemas y un <br>
+        aprendizaje rápido. Además, tengo un <strong>nivel intermedio de <br> inglés</strong>
+        , lo que me permite comunicarme y comprender <br>
+        documentación técnica en este idioma de manera efectiva. <br>
+    </p> <br>
+
+    <img src="images/foto_david_circulo.png" alt="foto" width="250" height="250"> <br><br>
+
+    <h3 class="titles">Formulario de Contacto</h3>
+    <form action="regi_contact">
+        <fieldset>
+            <legend >Información Personal</legend> 
+
+            Nombre:
+            <input type="text" name="nombre" value="Jose David Espinoza Brenes" size="21" readonly> <br>
+
+            Correo:
+            <input type="text" name="correo" value="jdavidespinoza05@gmail.com" size="22" readonly> <br>
+            
+            Teléfono:
+            <input type="text" name="telefono" value="(506) 6193 1451" size="10" readonly><br><br>
+
+            <a class="link" href="mailto:jdavidespinoza05@gmail.com" target="_blank">Enviar Correo</a>
+        
+        </fieldset>
+    </form>
+</body>
+
+
+<footer>
+    <p>
+        &copy; 2025 David Espinoza. Todos los derechos reservados.
+    </p>
+</footer>
+</html>
