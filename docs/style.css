@@ -221,23 +221,23 @@ p {
 .projects-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
-    gap: 0;  /* Reduce el gap para que los elementos estén más juntos */
+    gap: 0;  /* Aumentado el gap para separar los elementos */
     justify-items: center; /* Centra las columnas horizontalmente */
-    margin-top: 1.25rem; /* 20px => 1.25rem */
+    margin-top: 2.5rem; /* 20px => 2.5rem */
 }
 
 .best-projects,
 .projects article {
     background-color: #fff;
-    padding: 1.25rem; /* 20px => 1.25rem */
-    border-radius: 0.625rem; /* 10px => 0.625rem */
-    box-shadow: 0px 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-    border: 0.125rem solid #333; /* 2px => 0.125rem */
-    margin-top: 2.5rem; /* 40px => 2.5rem */
+    padding: 2rem; /* Aumentado el padding de 1.25rem a 2rem */
+    border-radius: 1rem; /* Aumentado el border-radius de 0.625rem a 1rem */
+    box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border: 0.25rem solid #333; /* Aumentado el border de 0.125rem a 0.25rem */
+    margin-top: 3.125rem; /* Aumentado el margin-top de 2.5rem a 3.125rem */
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     width: 100%; /* Se adapta a la pantalla */
-    max-width: 22.5rem; /* 360px => 22.5rem */
-    height: 18.75rem; /* 300px => 18.75rem */
+    max-width: 35rem; /* Aumentado el max-width de 22.5rem a 35rem */
+    height: 25rem; /* Aumentado el height de 18.75rem a 25rem */
     display: flex; 
     flex-direction: column; 
     justify-content: center; 
@@ -249,26 +249,27 @@ p {
 
 .best-projects:hover,
 .projects article:hover {
-    transform: translateY(-0.625rem); /* -10px => -0.625rem */
-    box-shadow: 0px 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-1rem); /* Aumentado el translateY de -0.625rem a -1rem */
+    box-shadow: 0px 1rem 2rem rgba(0, 0, 0, 0.15);
 }
 
 .projects h2.titles,
 .projects h3.titles {
-    margin-bottom: 1.875rem; /* 30px => 1.875rem */
-    font-size: 1.875rem; /* 30px => 1.875rem */
+    margin-bottom: 2.5rem; /* Aumentado el margin-bottom de 1.875rem a 2.5rem */
+    font-size: 2.25rem; /* Aumentado el font-size de 1.875rem a 2.25rem */
     color: #333;
     text-transform: uppercase;
-    letter-spacing: 0.0625rem; /* 1px => 0.0625rem */
+    letter-spacing: 0.125rem; /* Aumentado el letter-spacing de 0.0625rem a 0.125rem */
 }
 
 .best-projects h2,
 .projects article h2 {
-    font-size: 1.5rem; /* 24px => 1.5rem */
+    font-size: 2rem; /* Aumentado el font-size de 1.5rem a 2rem */
     color: #333;
-    margin-bottom: 0.9375rem; /* 15px => 0.9375rem */
+    margin-bottom: 1.25rem; /* Aumentado el margin-bottom de 0.9375rem a 1.25rem */
     text-align: center;
 }
+
 
 body {
     background-color: #F5F5F5;
