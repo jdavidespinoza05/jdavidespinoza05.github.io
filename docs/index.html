@@ -34,12 +34,29 @@
                 to communicate and understand technical documentation effectively. <br>
             </p>
 
-            <button id="learnMoreBtn" class="learnMoreBtn">Learn More</button>
+            <button id="learnMoreBtn" class="learnMoreBtn">More Info</button>
 
-            <div id="moreLinks" class="moreLinks" style="display: none;">
-                <a class="link" href="https://www.linkedin.com/in/jose-david-espinoza-brenes-28b890257/" target="_blank">My LinkedIn</a>
-                <a class="link" href="https://github.com/jdavidespinoza05" target="_blank">My GitHub</a>
+            <div id="moreLinks" class="moreLinks">
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/jdavid-espinoza" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i> <!-- Ícono agregado -->
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/jdavidespinoza05" target="_blank">
+                    <i class="fa-brands fa-github"></i> <!-- Ícono agregado -->
+                </a>
             </div>
+            
+            <script src="https://kit.fontawesome.com/2f3de93801.js" crossorigin="anonymous"></script>
+
+            <script>
+                const learnMoreBtn = document.getElementById("learnMoreBtn");
+                const moreLinks = document.getElementById("moreLinks");
+
+                learnMoreBtn.addEventListener("click", function () {
+                    moreLinks.classList.toggle("show"); // Simplificado con toggle
+                });
+            </script>
         </div>
     </section>
 

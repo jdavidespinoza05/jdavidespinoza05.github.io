@@ -138,31 +138,40 @@ p {
 
 /* Sección More Links */
 .moreLinks {
-    display: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: opacity 0.5s ease, max-height 0.5s ease;
+    transition: all 0.5s ease; 
+    margin: 20px auto;
 }
 
 .moreLinks.show {
-    display: block;
     opacity: 1;
-    max-height: 6.25rem; /* 100px => 6.25rem */
+    max-height: 50px; 
+    margin-top: 1rem; 
 }
 
 .moreLinks a {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     color: #333;
-    padding: 0.3125rem; /* 5px => 0.3125rem */
-    font-size: 1.125rem; /* 18px => 1.125rem */
+    font-size: 2rem;
     transition: color 0.3s ease;
-    margin-top: 0.5rem; /* 8px => 0.5rem */
+    color: #fff;
+    font-size: 2.5rem;
 }
 
 .moreLinks a:hover {
-    color: #555;
+    color: #0077b5;
+}
+
+.moreLinks a:nth-child(2):hover {
+    color: #6e5494; 
 }
 
 .titles {
