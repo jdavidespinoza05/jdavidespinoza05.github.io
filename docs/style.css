@@ -298,6 +298,10 @@ p {
     text-align: center;
 }
 
+html, body {
+    width: 100%;         /* Asegura que el ancho total se mantenga */
+    height: 100%;        /* Asegura que la altura total se mantenga */
+}
 
 body {
     background-color: #F5F5F5;
