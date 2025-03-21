@@ -298,11 +298,10 @@ p {
     text-align: center;
 }
 
-html, body {
-    width: 100%;         /* Asegura que el ancho total se mantenga */
-    height: 100%;        /* Asegura que la altura total se mantenga */
+body, html {
+    width: 100%;
+    overflow-x: hidden; /* Elimina el scroll horizontal no deseado */
 }
-
 body {
     background-color: #F5F5F5;
     font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -313,6 +312,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 
 .skills {
     padding: 1.875rem; /* 30px => 1.875rem */
@@ -399,24 +399,67 @@ body {
     text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+    .skills,
+    .contact {
+        max-width: 90%; /* Reduce el ancho máximo */
+        padding: 1.25rem; /* Disminuye el padding */
+        margin: 2rem auto; /* Reduce el margen superior/inferior */
+    }
 
-.footerAnimation{
-    position: relative;
-    width: 100%;
-    height: 150px;
-    background: #F5F5F5;
-    overflow: hidden;
+    .skills .titles,
+    .contact .titles {
+        font-size: 1.5rem; /* Tamaño de fuente más pequeño */
+    }
 
+    .skills li {
+        font-size: 0.9rem; /* Texto más compacto */
+        margin: 0.5rem 0; /* Menos espacio entre líneas */
+    }
+
+    .contact input {
+        width: 90%; /* Inputs ocuparán el 90% del contenedor */
+        max-width: 100%; /* Elimina el límite máximo */
+    }
+
+    .contact a.link {
+        font-size: 0.9rem; /* Tamaño de enlace más pequeño */
+    }
 }
 
-.footerAnimation .wave{
-    position:absolute;
+/* Ajustes extra para pantallas muy pequeñas (ej: iPhone 12 Pro) */
+@media (max-width: 390px) {
+    .skills,
+    .contact {
+        max-width: 95%; /* Aprovecha mejor el espacio */
+        padding: 1rem;
+    }
+
+    .skills .titles,
+    .contact .titles {
+        font-size: 1.3rem;
+    }
+}
+
+.footerAnimation {
+    position: relative;
+    width: 100%;
+    min-width: 100%; /* Obliga al contenedor a expandirse */
+    height: 150px;
+    background: #F5F5F5;
+    overflow: visible; /* Permite que las olas se vean más allá del viewport */
+}
+
+.footerAnimation .wave {
+    position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 200%; /* Doble del ancho del viewport para cubrir scroll horizontal */
     height: 100px;
     background: url(images/wave.png);
-    background-size: 1000px 100px;
+    background-size: 1000px 100px; /* Ajusta según la imagen */
+    animation: animate 30s linear infinite;
+    transform: translateX(-25%); /* Centra la animación */
 }
 
 .footerAnimation .wave.wave1{
@@ -447,21 +490,18 @@ body {
     animation-delay: -5s;
     bottom: 20px;
 }
-@keyframes animate{
-    0%{
+@keyframes animate {
+    0% {
         background-position-x: 0;
     }
-    100%{
-        background-position-x: 1000px;
+    100% {
+        background-position-x: 1000px; /* Igual al tamaño del background-size */
     }
 }
-@keyframes animate2{
-    0%{
-        background-position-x: 0;
-    }
-    100%{
-        background-position-x: -1000px;
-    }
+
+@keyframes animate2 {
+    0% { background-position-x: 0; }
+    100% { background-position-x: -1000px; }
 }
 
 footer{
@@ -476,4 +516,66 @@ footer{
 #cpr{
     color: #555;
     font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .projects {
+        padding: 1.5rem 0; /* Reduce el padding vertical */
+    }
+    
+    .projects-container {
+        gap: 1rem; /* Agrega espacio entre elementos */
+        padding: 0 1rem; /* Padding lateral para evitar pegado a bordes */
+    }
+    
+    .best-projects,
+    .projects article {
+        padding: 1.5rem; /* Reduce el padding interno */
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+        height: auto; /* Altura automática para contenido flexible */
+        min-height: 22rem; /* Altura mínima para mantener consistencia */
+        margin-top: 1.5rem; /* Reduce margen superior */
+        border-width: 0.2rem; /* Borde más delgado */
+    }
+    
+    .projects h2.titles,
+    .projects h3.titles {
+        font-size: 1.4rem; /* Tamaño más pequeño para títulos */
+        margin-bottom: 1rem;
+    }
+    
+    .best-projects h2,
+    .projects article h2 {
+        font-size: 1.5rem; /* Reduce tamaño de títulos de tarjetas */
+        margin-bottom: 1rem;
+    }
+    
+    .projects ul {
+        font-size: 0.9rem; /* Texto más pequeño para listas */
+    }
+}
+
+/* Ajustes extra para pantallas muy pequeñas (ej: < 400px) */
+@media (max-width: 400px) {
+    .best-projects,
+    .projects article {
+        padding: 1rem;
+        min-height: 20rem; /* Altura mínima reducida */
+        border-radius: 0.8rem; /* Bordes menos redondeados */
+    }
+    
+    .projects h2.titles {
+        font-size: 1.3rem;
+    }
+    
+    .projects ul {
+        font-size: 0.85rem;
+    }
+}
+
+@media (hover: none) {
+    .best-projects:hover,
+    .projects article:hover {
+        transform: none; /* Desactita animación hover en dispositivos táctiles */
+    }
 }
