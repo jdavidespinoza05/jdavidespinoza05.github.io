@@ -6,10 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Personal</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-9a9tT5sD9xwL5M+1NXax3V0kgoZXgFwJ7m3/J7z0PsbTTCwDdAyj2t8luFLtffI1" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
     <section class="aboutMe">
@@ -21,30 +20,26 @@
                 <span>!</span>
             </h1>
         </div>
-    
-        <div class="aboutMe_container">
-            
+
+        <div class="aboutMe_container container">
             <p id="description">
                 <span class="highlight-inline" id="name">I’m David</span>, a Computer Science Engineering student <br>
-                    at Instituto Tecnológico de Costa Rica (TEC) with over two years of <br>
-                    programming experience. I have a strong foundation in <strong>Python</strong>, <br>
-                    <strong>C++</strong>, <strong>JavaScript</strong>, <strong>HTML</strong>, and <strong>CSS</strong>. I have worked in <strong>web development</strong> <br>
-                    and managed projects using <strong>GitHub</strong>. I consider myself a creative, <br>
-                    detail-oriented, and perfectionist person, with strong skills in <br>
-                    effective communication, problem-solving, and quick learning. <br>
-                    Additionally, I have an <strong>intermediate level of English</strong>, which allows me <br>
-                    to communicate and understand technical documentation effectively. <br>
-                
-            </p> 
+                at Instituto Tecnológico de Costa Rica (TEC) with over two years of <br>
+                programming experience. I have a strong foundation in <strong>Python</strong>, <br>
+                <strong>C++</strong>, <strong>JavaScript</strong>, <strong>HTML</strong>, and <strong>CSS</strong>. I have worked in <strong>web development</strong> <br>
+                and managed projects using <strong>GitHub</strong>. I consider myself a creative, <br>
+                detail-oriented, and perfectionist person, with strong skills in <br>
+                effective communication, problem-solving, and quick learning. <br>
+                Additionally, I have an <strong>intermediate level of English</strong>, which allows me <br>
+                to communicate and understand technical documentation effectively. <br>
+            </p>
 
             <button id="learnMoreBtn" class="learnMoreBtn">Learn More</button>
 
             <div id="moreLinks" class="moreLinks" style="display: none;">
                 <a class="link" href="https://www.linkedin.com/in/jose-david-espinoza-brenes-28b890257/" target="_blank">My LinkedIn</a>
                 <a class="link" href="https://github.com/jdavidespinoza05" target="_blank">My GitHub</a>
-                
             </div>
-
         </div>
     </section>
 
@@ -52,9 +47,8 @@
         <hr class="hr-line">
     </div>
 
-    <section class="projects">
+    <section class="projects container">
         <div class="projects-container">
-
             <div class="best-projects">
                 <h2 class="titles">Best Projects</h2>
                 <ul>
@@ -62,10 +56,10 @@
                     <li>Reservations App <strong>(C++)</strong></li>
                     <li>Shipping App <strong>(Java)</strong></li>
                     <li>Arkanoid Game with Allegro <strong>(C++)</strong></li>
-                    <li>Personal Portfolio <strong>(HTML/CSS/JavaScript)</strong></li>      
+                    <li>Personal Portfolio <strong>(HTML/CSS/JavaScript)</strong></li>
                 </ul>
             </div>
-    
+
             <article>
                 <h3 class="titles">Currently Working On</h3>
                 <ul>
@@ -77,7 +71,7 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills container">
         <h2 class="titles">Skills</h2>
         <ul>
             <li><strong>Lenguajes:</strong> Python, C++, JavaScript, HTML, CSS</li>
@@ -86,21 +80,21 @@
             <li><strong>Otras habilidades:</strong> Desarrollo frontend, diseño responsive</li>
         </ul>
     </section>
-    
-    <section class="contact">
+
+    <section class="contact container">
         <h2 class="titles">Contact</h2>
         <form action="regi_contact">
             <fieldset>
                 <legend>Información Personal</legend>
                 Nombre:
                 <input type="text" name="nombre" value="Jose David Espinoza Brenes" size="21" readonly><br>
-    
-                Correo:   
+
+                Correo:
                 <input type="text" name="correo" value="jdavidespinoza05@gmail.com" size="22" readonly><br>
-    
+
                 Teléfono:
                 <input type="text" name="telefono" value="(506) 6193 1451" size="10" readonly><br><br>
-    
+
                 <a class="link" href="mailto:jdavidespinoza05@gmail.com" target="_blank">Enviar Correo</a>
             </fieldset>
         </form>
@@ -113,15 +107,13 @@
         <div class="wave wave4"></div>
     </section>
 
-    <footer>
+    <footer class="text-center">
         <p id="cpr">
             &copy; 2025 David Espinoza. All rights reserved.
         </p>
     </footer>
-    
+
     <script src="index.js"></script>
 </body>
-
-
 
 </html>
