@@ -162,7 +162,7 @@ p {
     color: #333;
     font-size: 2rem;
     transition: color 0.3s ease;
-    color: #fff;
+    color: #525151;
     font-size: 2.5rem;
 }
 
@@ -210,8 +210,8 @@ p {
     border: 0;
     height: 0.0625rem; /* 1px => 0.0625rem */
     background-color: #333; 
-    margin-top: 6.25rem; /* 100px => 6.25rem */
-    margin-bottom: 2.5rem; /* 40px => 2.5rem */
+    margin-top: 4rem; /* 100px => 6.25rem */
+    margin-bottom: 1rem; /* 40px => 2.5rem */
     width: calc(100% - 12.5rem); /* 200px => 12.5rem */
     margin-left: auto; 
     margin-right: auto; 
