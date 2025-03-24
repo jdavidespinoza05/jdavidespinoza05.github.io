@@ -5,39 +5,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
     <title>Portfolio Personal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-9a9tT5sD9xwL5M+1NXax3V0kgoZXgFwJ7m3/J7z0PsbTTCwDdAyj2t8luFLtffI1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="index.js" as="script">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/2f3de93801.js" crossorigin="anonymous"></script>
+
+    <style>
+        .vignette-overlay {
+            will-change: opacity, transform;
+            contain: strict;
+        }
+    </style>
+
+    <script>
+        if (window.location.hostname === 'localhost') {
+            document.body.style.cssText = 'transform: translateZ(0); will-change: transform;';
+            
+            window.__originalRAF = window.requestAnimationFrame;
+            window.requestAnimationFrame = (callback) => {
+                return window.__originalRAF(() => {
+                    const start = performance.now();
+                    callback(start);
+                });
+            };
+        }
+    </script>
 
 </head>
 
 <body>
+    <div class="floating-bar">
+        <span class="bar-text">David Espinoza</span>
+        <div class="bar-buttons">
+            <a href="https://www.linkedin.com/in/jdavid-espinoza" target="_blank" class="bar-button">
+                <i class="fab fa-linkedin"></i> <!-- Icono de LinkedIn -->
+            </a>
+            <a href="mailto:jdavidespinoza05@gmail.com" class="bar-button">
+                <i class="fas fa-envelope"></i> <!-- Icono de correo -->
+            </a>
+        </div>
+    </div>
+
     <section class="aboutMe">
-        <div class="hey_anmt">
-            <h1>
-                <span>H</span>
-                <span>E</span>
-                <span>Y</span>
-                <span>!</span>
-            </h1>
+        
+        <div class="head"> 
+            <div class="hey_anmt">
+                <h1>
+                    <span style="--index: 0">H</span>
+                    <span style="--index: 1">E</span>
+                    <span style="--index: 2">Y</span>
+                </h1>
+            </div>
+            <div>
+                <h2 class="titles">
+                    <span>I</span>
+                    <span>’</span>
+                    <span>m</span>
+                    <span> </span>
+                    <span>D</span>
+                    <span>a</span>
+                    <span>v</span>
+                    <span>i</span>
+                    <span>d</span>
+                    <span>!</span>
+                </h2>
+            </div>
+            <div class="circle">
+                <div class="circle-content">
+                    <p class="description-text">Computer Science Engineering student at Instituto Tecnológico de Costa Rica (TEC) with over two years of programming experience.</p>
+                    <p class="description-text">I have a strong foundation in <strong>Python</strong>, <strong>C++</strong>, <strong>JavaScript</strong>, <strong>HTML</strong>, and <strong>CSS</strong> and I have worked in <strong>web development</strong> and managed projects using <strong>GitHub</strong>.</p>
+                    <p class="description-text">I consider myself a creative, detail-oriented, and perfectionist person, with strong skills in effective communication, problem-solving, and quick learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div>
+        <hr class="hr-line">
+    </div>
+    
+
+    <section class="projects container">
+        <div class="projects-container">
+            <!-- Caja 1: Best Projects -->
+            <div class="project-box best-projects">
+              <h2 class="titles">Best Projects</h2>
+              <ul>
+                <li>Music Player <strong><i class="fa-brands fa-python fa-icon"></i>(Python)</strong></li>
+                <li>Reservations App <strong><i class="fa-solid fa-c fa-icon"></i>(C++)</strong></li>
+                <li>Shipping App <strong><i class="fa-brands fa-java fa-icon"></i>(Java)</strong></li>
+                <li>Arkanoid Game with Allegro <strong><i class="fa-solid fa-c fa-icon"></i>(C++)</strong></li>
+                <li>Personal Portfolio <strong>
+                  <i class="fa-brands fa-html5 fa-icon"></i>
+                  <i class="fa-brands fa-css3-alt fa-icon" style="left: 20px;"></i>
+                  <i class="fa-brands fa-js fa-icon" style="left: 40px;"></i>
+                  (HTML/CSS/JavaScript)
+                </strong></li>
+              </ul>
+            </div>
+          
+            <!-- Caja 2: Currently Working On -->
+            <div class="project-box currently-working">
+              <h3 class="titles">Currently Working On</h3>
+              <ul>
+                <li>This Page! <strong>
+                  <i class="fa-brands fa-html5 fa-icon"></i>
+                  <i class="fa-brands fa-css3-alt fa-icon" style="left: 20px;"></i>
+                  <i class="fa-brands fa-js fa-icon" style="left: 40px;"></i>
+                  (HTML, CSS, JS)
+                </strong></li>
+                <li>Rock, Paper, Scissors Game <strong><i class="fa-brands fa-js fa-icon"></i>(JS)</strong></li>
+                <li>Online Shop <strong><i class="fa-brands fa-angular fa-icon"></i>(Angular)</strong></li>
+              </ul>
+            </div>
+          
+            <!-- Caja 3: Skills -->
+            <div class="project-box skills">
+              <h2 class="titles">Skills</h2>
+              <ul>
+                <li><strong>Languages:</strong> 
+                  <i class="fa-brands fa-python"></i> Python,
+                  <i class="fa-solid fa-c"></i> C++,
+                  <i class="fa-brands fa-js"></i> JavaScript,
+                  <i class="fa-brands fa-html5"></i> HTML,
+                  <i class="fa-brands fa-css3-alt"></i> CSS
+                </li>
+                <li><strong>Frameworks:</strong> 
+                  <i class="fa-brands fa-angular"></i> Angular (learning),
+                  <i class="fa-solid fa-code-branch"></i> TypeScript
+                </li>
+                <li><strong>Tools:</strong> 
+                  <i class="fa-brands fa-git-alt"></i> Git,
+                  <i class="fa-brands fa-github"></i> GitHub,
+                  <i class="fa-solid fa-code"></i> Visual Studio Code
+                </li>
+                <li><strong>Other skills:</strong> Frontend development, responsive design</li>
+              </ul>
+            </div>
+          </div>
+
+        
+      </section>
+      
+
+    <section class="contact">
+        <div class="typewriter_container">
+            <div class="tw">
+                <h2 class="title">Say Hey!</h2>
+            </div>
         </div>
 
-        <div class="aboutMe_container container">
-            <p id="description">
-                <span class="highlight-inline" id="name">I’m David</span>, a Computer Science Engineering student <br>
-                at Instituto Tecnológico de Costa Rica (TEC) with over two years of <br>
-                programming experience. I have a strong foundation in <strong>Python</strong>, <br>
-                <strong>C++</strong>, <strong>JavaScript</strong>, <strong>HTML</strong>, and <strong>CSS</strong>. I have worked in <strong>web development</strong> <br>
-                and managed projects using <strong>GitHub</strong>. I consider myself a creative, <br>
-                detail-oriented, and perfectionist person, with strong skills in <br>
-                effective communication, problem-solving, and quick learning. <br>
-                Additionally, I have an <strong>intermediate level of English</strong>, which allows me <br>
-                to communicate and understand technical documentation effectively. <br>
-            </p>
+    <div class="contact-info">
+        <div class="contact-item">
+            <i class="fa-solid fa-user-astronaut"></i>
+            <span class="glow-text">Jose David Espinoza</span>
+        </div>
+        <div class="contact-item">
+            <i class="fa-solid fa-meteor"></i>
+            <a href="mailto:jdavidespinoza05@gmail.com" class="glow-text">jdavidespinoza05@gmail.com</a>
+        </div>
+        <div class="contact-item">
+            <i class="fa-solid fa-satellite"></i>
+            <span class="glow-text">+506 61931451</span>
+        </div>
+    </div>
 
-            <button id="learnMoreBtn" class="learnMoreBtn">More Info</button>
+        <div class="aboutMe_container container">
+
+            <button id="learnMoreBtn" class="learnMoreBtn" aria-label="Explore my projects" aria-expanded="false">
+                Explore My Work
+            </button>
 
             <div id="moreLinks" class="moreLinks">
                 <!-- LinkedIn -->
@@ -49,73 +197,7 @@
                     <i class="fa-brands fa-github"></i> <!-- Ícono agregado -->
                 </a>
             </div>
-            
-
         </div>
-    </section>
-
-    <div>
-        <hr class="hr-line">
-    </div>
-
-    <section class="projects container">
-        <div class="projects-container">
-          <!-- Caja 1: Best Projects -->
-          <div class="project-box best-projects">
-            <h2 class="titles">Best Projects</h2>
-            <ul>
-              <li>Music Player <strong>(Python)</strong></li>
-              <li>Reservations App <strong>(C++)</strong></li>
-              <li>Shipping App <strong>(Java)</strong></li>
-              <li>Arkanoid Game with Allegro <strong>(C++)</strong></li>
-              <li>Personal Portfolio <strong>(HTML/CSS/JavaScript)</strong></li>
-            </ul>
-          </div>
-      
-          <!-- Caja 2: Currently Working On -->
-          <div class="project-box currently-working">
-            <h3 class="titles">Currently Working On</h3>
-            <ul>
-              <li>This Page! <strong>(HTML, CSS, JS)</strong></li>
-              <li>Rock, Paper, Scissors Game <strong>(JS)</strong></li>
-              <li>Online Shop <strong>(Angular)</strong></li>
-            </ul>
-          </div>
-      
-          <!-- Caja 3: Skills -->
-          <div class="project-box skills">
-            <h2 class="titles">Skills</h2>
-            <ul>
-              <li><strong>Languages:</strong> Python, C++, JavaScript, HTML, CSS</li>
-              <li><strong>Frameworks:</strong> Angular (learning), TypeScript</li>
-              <li><strong>Tools:</strong> Git, GitHub, Visual Studio Code</li>
-              <li><strong>Other skills:</strong> Frontend development, responsive design</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <div>
-        <hr class="hr-line">
-    </div>
-
-    <section class="contact container">
-        <h2 class="titles">Contact</h2>
-        <form action="regi_contact">
-            <fieldset>
-                <legend>Personal Info</legend>
-                Name:
-                <input type="text" name="name" value="Jose David Espinoza Brenes" size="21" readonly><br>
-
-                Mail:
-                <input type="text" name="mail" value="jdavidespinoza05@gmail.com" size="22" readonly><br>
-
-                Phone:
-                <input type="text" name="phone" value="(506) 6193 1451" size="10" readonly><br><br>
-
-                <a class="link" href="mailto:jdavidespinoza05@gmail.com" target="_blank">Send Mail</a>
-            </fieldset>
-        </form>
     </section>
 
     <section class="footerAnimation">
@@ -129,9 +211,10 @@
         <p id="cpr">
             &copy; 2025 David Espinoza. All rights reserved.
         </p>
-    </footer>
+    </footer>   
 
-    
+    <div class="particles"></div>
+    <div class="vignette-overlay"></div>
     <script src="index.js"></script>
 </body>
 
