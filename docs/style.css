@@ -958,8 +958,8 @@ footer{
     .circle {
         top: 60%;
         left: 50% !important;
-        width: min(28rem, 90vw);
-        height: min(28rem, 90vh);
+        width: clamp(20rem, 90vw, 28rem);
+        height: clamp(20rem, 90vh, 28rem);
         animation: mobileSlideWobble 2s cubic-bezier(0.25, 0.46, 0.45, 1.2) 3.5s both;
     }
 
@@ -1009,8 +1009,37 @@ footer{
     }
 }
 
+@media (max-width: 400px) {
+    .circle {
+        top: 60%;
+        width: min(20rem, 100vw);
+        height: min(20rem, 100vh);
+        padding: 1.5rem;
+    }
+    
+    .circle-content {
+        margin-top: 0.5rem;
+    }
 
-@media (max-width: 768px) {
+    .description-text {
+        font-size: 0.75em;
+    }
+
+    .titles span{
+        font-size: 2.4rem;
+    }
+
+    .hr-line{
+        margin-top: 0;
+    }
+
+    .head{
+        height: 50rem;
+    }
+}
+
+
+@media (max-width: 720px) {
     .typewriter_container {
         margin-top: 30px;
         padding: 0 15px;
