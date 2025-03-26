@@ -1007,6 +1007,10 @@ footer{
     .circle-content {
         margin-top: 1rem;
     }
+
+    .head{
+        height: 50rem;
+    }
 }
 
 @media (max-width: 400px) {
